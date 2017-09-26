@@ -10,6 +10,7 @@ namespace Pisemka1
     {
         static void Main(string[] args)
         {
+            int i = 1;
         }
     }
 }
