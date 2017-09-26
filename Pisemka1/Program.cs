@@ -8,7 +8,7 @@ namespace Pisemka1
 {
     class Program
     {
-        public static bool isNumberOrNot(char znak)
+        public static bool IsNumberOrNot(char znak)
         {           
             double cislo = Char.GetNumericValue(znak);
 
@@ -41,9 +41,7 @@ namespace Pisemka1
                     {
                         for (int i = 0; i < input.Length; i++)
                         {
-                            //double cislo = Char.GetNumericValue();
-
-                            if (isNumberOrNot(input[i]))
+                           if (IsNumberOrNot(input[i]))
                             {
                                 lastCheck = true;
                                 currentNumber = currentNumber * 10 + Char.GetNumericValue(input[i]);
@@ -51,14 +49,12 @@ namespace Pisemka1
                             else
                             {
                                 if (lastCheck && !String.IsNullOrEmpty(currentNumber.ToString()))
-                                {
-                                    //output.Add(currentNumber);
+                                {                                    
                                     lastCheck = false;
                                     currentNumber = 0;
                                     numCount++;
                                 }
                             }
-
                         }
                         if (Char.GetNumericValue(input[input.Length - 1]) >= 0)
                         {
